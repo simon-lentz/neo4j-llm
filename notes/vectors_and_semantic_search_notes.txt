@@ -1,0 +1,58 @@
+Semantic Search vs Traditional Keyword Search:
+
+Semantic search aims to understand search phrases intent 
+and contextual meaning, rather than just focusing on individual 
+keywords. Traditional keyword search often depends on exact-match 
+keywords or proximity-based algorithms that find similar words.
+For example, if you input "apple" in a traditional search, you might 
+predominantly get results about the fruit. However, in a semantic search, 
+the engine tries to gauge the context: Are you searching about the fruit, 
+the tech company, or something else? The results are tailored based on 
+the term and the perceived intent.
+
+
+Vectors and Embeddings:
+
+In natural language processing (NLP) and machine learning, numerical 
+representations (known as vectors) represent words and phrases.
+Each dimension in a vector can represent a particular semantic aspect of 
+the word or phrase. When multiple dimensions are combined, they can represent 
+the overall meaning of the word or phrase. For example, the word "apple" might 
+be represented by a vector with the following dimensions: fruit, technology company,
+color, taste, shape. When applied in a search context, the vector for "apple" can be 
+compared to the vectors for other words or phrases to determine the most relevant 
+results. You can create vectors in various ways, but one of the most common methods 
+is to use a large language model. These vectors are known as embeddings. With advanced 
+models, these embeddings also contain contextual information. For example, the embeddings 
+for the word "apple" are: 
+
+0.0077788467, -0.02306925, -0.007360777, 
+-0.027743412, -0.0045747845, 0.01289164, 
+-0.021863015, -0.008587573, 0.01892967, 
+-0.029854324, -0.0027962727, 0.020108491, 
+-0.004530236, 0.009129008, …​ and so on.
+
+The vector for a word can change based on its surrounding context. For instance, 
+the word bank will have a different vector in river bank than in savings bank.
+Semantic search systems can use these contextual embeddings to understand user intent.
+LLM providers typically expose API endpoints that covert a chunk of text into a 
+vector embedding. Depending on the provider, the shape of the vector may differ.
+OpenAI’s text-embedding-ada-002 embedding model converts text into a vector of 1,536 
+dimensions.
+
+You can use the distance or angle between vectors to gauge the semantic similarity 
+between words or phrases. Words with similar meanings or contexts will have vectors 
+that are close together, while unrelated words will be farther apart. This principle 
+is employed in semantic search to find contextually relevant results for a user’s 
+query. A semantic search involves the following steps: 
+
+- The user submits a query.
+- The system creates a vector representation (embedding) of the query.
+- The system compares the query vector to the vectors of the indexed data.
+- The results are scored based on their similarity.
+- The system returns the most relevant results to the user.
+
+Vectors can represent more than just words. They can also represent entire documents, 
+images, audio, or other data types. They are instrumental in the operation of many other 
+machine-learning tasks.
+
